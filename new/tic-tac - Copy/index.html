@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GAME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Tic Tac Toe</h2>
+  <div id="setup">
+    <label for="mode">Select Game Mode:</label>
+    <select id="mode" onchange="togglePlayerOInput()">
+      <option value="">--Choose mode--</option>
+      <option value="multiplayer">Multiplayer</option>
+      <option value="computer">Vs Computer</option>
+    </select>
+    <label for="playerXName">Player X Name:</label>
+    <input type="text" id="playerXName" placeholder="Enter player X name" />
+    <div id="playerONameContainer" style="display:none;">
+      <label for="playerOName">Player O Name:</label>
+      <input type="text" id="playerOName" placeholder="Enter player O name" />
+    </div>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="board" style="display:grid;">
+    <div class="cell" onclick="play(0)"></div>
+    <div class="cell" onclick="play(1)"></div>
+    <div class="cell" onclick="play(2)"></div>
+    <div class="cell" onclick="play(3)"></div>
+    <div class="cell" onclick="play(4)"></div>
+    <div class="cell" onclick="play(5)"></div>
+    <div class="cell" onclick="play(6)"></div>
+    <div class="cell" onclick="play(7)"></div>
+    <div class="cell" onclick="play(8)"></div>
+  </div>
+
+  <div id="status"></div>
+  <button id="resetBtn" onclick="reset()">Reset</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
